@@ -5,7 +5,7 @@ function Header() {
     return (
         <header className="bg-bg-surface border-b border-border py-4 px-8 flex flex-row justify-between items-center">
             <div className="flex flex-row items-center gap-4">
-                <FileDiff className="bg-accent rounded-md p-1"></FileDiff>
+                <FileDiff aria-hidden="true" className="bg-accent rounded-md p-1"></FileDiff>
                 <h1 className="font-bold text-2xl">Diffract</h1>
             </div>
 
