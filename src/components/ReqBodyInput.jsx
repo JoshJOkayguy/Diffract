@@ -35,7 +35,7 @@ function ReqBodyInput({ id }) {
                     syntaxHighlighting(jsonHighlightStyle),
                     EditorView.theme({
                         '&': {
-                            height: '6rem',
+                            height: '8rem',
                             backgroundColor: 'transparent',
                             color: 'inherit',
                             borderRadius: '0.375rem',
