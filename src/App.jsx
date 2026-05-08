@@ -5,11 +5,11 @@ function App() {
   return (
     <>
         <Header></Header>
-        <main className="grid grid-cols-2 px-4 border border-border">
+        <main className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 px-4 border border-border">
             <div className="pr-4">
                 <RequestWindow id="A" />
             </div>
-            <div className="pl-4 border-l border-border">
+            <div className="lg:pl-4 lg:border-l lg:border-border">
                 <RequestWindow id="B" />
             </div>
         </main>
