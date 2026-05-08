@@ -11,7 +11,7 @@ function RequestWindow({id}) {
                 <ReqMethodSelector id={id}></ReqMethodSelector>
             </div>
             <div className="flex flex-row gap-4">
-                <ReqUrlInput id={id}></ReqUrlInput>
+                <ReqUrlInput placeholder={"api.example.com/v1/test"} id={id}></ReqUrlInput>
                 <ActionButton text="Send" icon={null}></ActionButton>
             </div>
             <label htmlFor={"body-" + id} className="text-sm font-light text-text-muted">Body</label>
