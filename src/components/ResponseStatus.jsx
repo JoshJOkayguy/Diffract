@@ -6,7 +6,7 @@
     }
 
     return (
-        <p className="inline">{statusIcon} {id}: 200 OK • 100ms</p>
+        <p className="inline">{statusIcon} {id}: {response.status} {response.statusText} • {response.headers['x-response-time']}ms</p>
     )
 }
 
