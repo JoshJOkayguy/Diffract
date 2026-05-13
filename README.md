@@ -37,6 +37,15 @@ Diffract offers a simple way to test different versions of an API and compare th
    npm install
    ```
 
+## 🧪 Testing
+
+Diffract uses [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing.
+
+To run the test suite:
+```bash
+npm test
+```
+
 ### Running the Project
 
 To use Diffract, you need to run both the frontend development server and the proxy server.
