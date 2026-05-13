@@ -17,6 +17,7 @@
     "@lezer/highlight": "^1.2.3",
     "@tailwindcss/vite": "^4.2.4",
     "codemirror": "^6.0.2",
+    "jsondiffpatch": "^0.7.3",
     "lucide-react": "^1.14.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
