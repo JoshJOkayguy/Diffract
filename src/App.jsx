@@ -29,12 +29,12 @@ function App() {
                     <p><span className="bg-diff-changed rounded-full size-2.5 inline-block"></span> changed</p>
                 </div>
             </div>
-            <DiffViewer responseA={responseA} responseB={responseB}></DiffViewer>
+            <DiffViewer responseA={responseA && responseA.data} responseB={responseB && responseB.data}></DiffViewer>
         </div>
         <footer className="bg-bg-surface border-t border-border py-4 px-8 fixed bottom-0 left-0 right-0">
             <div className="flex flex-row justify-start items-center gap-8 text-sm text-text-muted">
-                <ResponseStatus id="A"></ResponseStatus>
-                <ResponseStatus id="B"></ResponseStatus>
+                <ResponseStatus id="A" response={responseA}></ResponseStatus>
+                <ResponseStatus id="B" response={responseB}></ResponseStatus>
             </div>
         </footer>
     </>
