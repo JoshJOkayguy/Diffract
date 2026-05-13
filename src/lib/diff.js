@@ -4,9 +4,7 @@ const differ = create()
 
 export function getDelta(a, b) {
     try {
-        const objA = JSON.parse(a)
-        const objB = JSON.parse(b)
-        return { delta: differ.diff(objA, objB), error: null }
+        return { delta: differ.diff(a, b), error: null }
     } catch (e) {
         return { delta: null, error: 'Invalid JSON in one or both responses' }
     }
