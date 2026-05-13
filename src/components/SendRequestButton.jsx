@@ -6,18 +6,21 @@ function SendRequestButton({id, method, url, body, setResState}) {
     async function sendRequest() {
         if (!url || !method) return
 
-        // Send an axios request to the specified endpoint with the provided body
+        // Send an axios request through the local proxy to avoid CORS issues
         const response = await axios({
-            method: method,
-            url: url,
-            data: body ?? "",
-            responseType: 'json',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            },
+            method: 'POST',
+            url: 'http://localhost:3001/proxy',
+            data: {
+                method: method,
+                url: url,
+                data: body ?? "",
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            }
         });
 
+        // TODO decide how to handle & display errors in the request and response
         // Update the responseA and responseB state variables with the response data
         setResState(response)
     }
