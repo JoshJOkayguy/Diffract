@@ -17,7 +17,8 @@ function SendRequestButton({id, method, url, body, setResState}) {
                 headers: {
                     'Content-Type': 'application/json',
                 }
-            }
+            },
+            validateStatus: () => true,
         });
 
         // TODO decide how to handle & display errors in the request and response
