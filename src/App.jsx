@@ -32,10 +32,14 @@ function App() {
             <DiffViewer responseA={responseA && responseA.data} responseB={responseB && responseB.data}></DiffViewer>
         </div>
         <footer className="bg-bg-surface border-t border-border py-4 px-8 fixed bottom-0 left-0 right-0">
-            <div className="flex flex-row justify-start items-center gap-8 text-sm text-text-muted">
-                <ResponseStatus id="A" response={responseA}></ResponseStatus>
-                <ResponseStatus id="B" response={responseB}></ResponseStatus>
+            <div className="flex flex-row justify-between items-center gap-4 text-sm text-text-muted">
+                <div className="flex flex-row justify-start items-center gap-8">
+                    <ResponseStatus id="A" response={responseA}></ResponseStatus>
+                    <ResponseStatus id="B" response={responseB}></ResponseStatus>
+                </div>
+                <p>© 2026 Brayden Simoneau</p>
             </div>
+
         </footer>
     </>
   )
