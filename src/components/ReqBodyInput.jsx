@@ -20,7 +20,7 @@ const jsonHighlightStyle = HighlightStyle.define([
     },
 ])
 
-function ReqBodyInput({ id }) {
+function ReqBodyInput({ id, state }) {
     const editorRef = useRef(null)
 
     useEffect(() => {
@@ -56,6 +56,12 @@ function ReqBodyInput({ id }) {
                         '.cm-activeLineGutter': {
                             backgroundColor: 'var(--color-bg-elevated)',
                         },
+                    }),
+                    EditorView.updateListener.of((update) => {
+                        if (update.docChanged) {
+                            const content = update.state.doc.toString();
+                            state(content)
+                        }
                     }),
                 ],
             }),
