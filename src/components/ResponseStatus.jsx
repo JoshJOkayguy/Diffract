@@ -1,7 +1,9 @@
 ﻿function ResponseStatus({id, response}) {
     let statusIcon = <span className="bg-diff-added rounded-full size-2.5 inline-block"></span>
 
-    if (!response || response.status != 200) {
+    if (!response) return null
+
+    if (response.status !== 200) {
         statusIcon = <span className="bg-diff-removed rounded-full size-2.5 inline-block"></span>
     }
 
