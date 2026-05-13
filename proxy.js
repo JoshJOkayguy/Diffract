@@ -5,7 +5,9 @@ import axios from 'axios';
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+    exposedHeaders: 'X-Response-Time',
+}));
 app.use(express.json());
 
 app.all('/proxy', async (req, res) => {
@@ -16,6 +18,7 @@ app.all('/proxy', async (req, res) => {
     }
 
     try {
+        const sendTime = Date.now()
         const response = await axios({
             method: method || 'GET',
             url: url,
@@ -30,6 +33,7 @@ app.all('/proxy', async (req, res) => {
             validateStatus: () => true, // Accept all status codes
         });
 
+        res.set('X-Response-Time', `${Date.now() - sendTime}`);
         res.status(response.status).json(response.data);
     } catch (error) {
         res.status(500).json({
