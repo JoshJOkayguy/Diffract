@@ -5,15 +5,16 @@ Diffract offers a simple way to test different versions of an API and compare th
 ## 🚀 Features
 
 - **Side-by-Side Requests**: Configure two independent API requests with custom methods, URLs, and JSON bodies.
-- **Visual Diff**: See exactly what was added, removed, or changed between two API responses.
+- **Visual Diff**: Side-by-side comparison of API responses using CodeMirror's merge view.
 - **Built-in Proxy**: A dedicated proxy server to bypass CORS restrictions when testing external APIs.
-- **Modern UI**: Clean, responsive interface built with Tailwind CSS and CodeMirror for JSON input.
+- **Modern UI**: Clean, responsive interface built with Tailwind CSS.
+- **Code Editor**: CodeMirror powered JSON input and diffing with syntax highlighting.
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: Vite, React, Tailwind CSS
 - **Editor**: CodeMirror (with JSON syntax highlighting)
-- **Diffing**: jsondiffpatch
+- **Diffing**: CodeMirror MergeView
 - **Proxy Server**: Node.js, Express, Axios
 - **Icons**: Lucide React
 
