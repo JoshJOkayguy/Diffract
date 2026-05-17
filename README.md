@@ -29,7 +29,7 @@ Diffract offers a simple way to test different versions of an API and compare th
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/diffract.git
+   git clone https://github.com/JoshJOkayguy/Diffract.git
    cd diffract
    ```
 
