@@ -6,7 +6,7 @@ import { MergeView } from '@codemirror/merge'
 describe('DiffViewer', () => {
   it('renders instructions when no responses are provided', () => {
     render(<DiffViewer responseA={null} responseB={null} />)
-    expect(screen.getByText(/Send both requests to see the diff/i)).toBeInTheDocument()
+    expect(screen.getByText(/Send a request to see the diff/i)).toBeInTheDocument()
   })
 
   it('renders the diff viewer container when responses are provided', () => {
