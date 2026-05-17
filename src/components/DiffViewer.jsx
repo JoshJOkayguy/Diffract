@@ -61,11 +61,11 @@ function DiffViewer({ responseA, responseB }) {
 
         const diff = new MergeView({
             a: {
-                doc: responseA === null ? "null" : JSON.stringify(responseA, null, 2) + "\n",
+                doc: responseA === null ? "{}" : JSON.stringify(responseA, null, 2) + "\n",
                 extensions: extensionList,
             },
             b: {
-                doc: responseB === null ? "null" : JSON.stringify(responseB, null, 2) + "\n",
+                doc: responseB === null ? "{}" : JSON.stringify(responseB, null, 2) + "\n",
                 extensions: extensionList,
             },
             gutter: true,
