@@ -26,7 +26,7 @@ function App() {
                 <div className="flex flex-row gap-4">
                     <p><span className="bg-diff-added rounded-full size-2.5 inline-block"></span> added</p>
                     <p><span className="bg-diff-removed rounded-full size-2.5 inline-block"></span> removed</p>
-                    <p><span className="bg-diff-changed rounded-full size-2.5 inline-block"></span> changed</p>
+                    {/*<p><span className="bg-diff-changed rounded-full size-2.5 inline-block"></span> changed</p>*/}
                 </div>
             </div>
             <DiffViewer responseA={responseA && responseA.data} responseB={responseB && responseB.data}></DiffViewer>
