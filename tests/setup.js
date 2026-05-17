@@ -7,19 +7,45 @@ vi.mock('@codemirror/view', () => ({
     destroy: vi.fn(),
     dispatch: vi.fn(),
   })),
+  lineNumbers: vi.fn(),
   basicSetup: [],
 }))
 
 vi.mock('@codemirror/state', () => ({
   EditorState: {
     create: vi.fn(),
+    readOnly: {
+      of: vi.fn(),
+    },
   },
 }))
 
-vi.mock('@codemirror/merge', () => ({
-  MergeView: vi.fn(() => ({
-    destroy: vi.fn(),
-  })),
+vi.mock('@codemirror/merge', () => {
+  const MergeView = vi.fn(function() {
+    this.destroy = vi.fn()
+  })
+  return { MergeView }
+})
+
+vi.mock('@codemirror/lang-json', () => ({
+  json: vi.fn(),
+}))
+
+vi.mock('@codemirror/language', () => ({
+  HighlightStyle: {
+    define: vi.fn(),
+  },
+  syntaxHighlighting: vi.fn(),
+}))
+
+vi.mock('@lezer/highlight', () => ({
+  tags: {
+    brace: {},
+    squareBracket: {},
+    string: {},
+    propertyName: {},
+    number: {},
+  },
 }))
 
 // Mock canvas for CodeMirror
