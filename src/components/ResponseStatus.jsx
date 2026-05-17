@@ -3,8 +3,11 @@
 
     if (!response) return null
 
-    if (response.status !== 200) {
+    if (response.status >= 500 && response.status <= 599) {
         statusIcon = <span className="bg-diff-removed rounded-full size-2.5 inline-block"></span>
+    }
+    else if (response.status >= 300 && response.status <= 499) {
+        statusIcon = <span className="bg-diff-changed rounded-full size-2.5 inline-block"></span>
     }
 
     return (
