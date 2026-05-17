@@ -59,8 +59,15 @@ function ReqBodyInput({ id, state }) {
                     }),
                     EditorView.updateListener.of((update) => {
                         if (update.docChanged) {
-                            const content = update.state.doc.toString();
-                            state(content)
+                            const rawContent = update.state.doc.toString();
+                            try {
+                                const body = JSON.stringify(JSON.parse(rawContent));
+                                state(body);
+                            }
+                            catch (error) {
+                                console.error('Error parsing JSON:', error);
+                            }
+
                         }
                     }),
                 ],
