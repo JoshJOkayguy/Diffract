@@ -47,7 +47,7 @@ function DiffViewer({ responseA, responseB }) {
                     padding: '0.5rem',
                 },
                 '.cm-gutters': {
-                    backgroundColor: 'transparent',
+                    backgroundColor: 'var(--color-bg-surface)',
                     border: 'none',
                 },
                 '.cm-activeLine': {
