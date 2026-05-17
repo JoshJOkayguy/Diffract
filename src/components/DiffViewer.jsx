@@ -80,7 +80,7 @@ function DiffViewer({ responseA, responseB }) {
     if (!responseA && !responseB) {
         return (
             <div className="flex items-center justify-center h-full text-text-muted text-sm font-mono">
-                Send both requests to see the diff
+                Send a request to see the diff
             </div>
         )
     }
